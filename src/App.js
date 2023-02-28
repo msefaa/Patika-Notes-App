@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Note from "./components/Note";
+import NoteList from "./components/Notelist/NoteList";
+import { ChakraProvider, Container } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Container
+        maxWidth={750}
+        mt={15}
+        shadow="md"
+        p={5}
+        my="auto"
+        justifyContent={"space-between"}
+      >
+        <Header />
+        <Note />
+        <NoteList />
+      </Container>
+    </ChakraProvider>
   );
 }
 
