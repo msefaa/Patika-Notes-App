@@ -51,6 +51,7 @@ function Note() {
           focusBorderColor="none"
           spellCheck="false"
           onChange={(e) => setNote(e.target.value)}
+          color={activeColor === "blue" ? "white" : "black"}
         />
         <Box
           display="flex"

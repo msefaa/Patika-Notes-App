@@ -51,7 +51,7 @@ function NoteList() {
           >
             <Text
               className={styles.noteFont}
-              color="gray.700"
+              color={item.color === "blue" ? "white" : "gray.700"}
               textShadow="0 0 1px #4A5568"
               p={1}
               height={180}
